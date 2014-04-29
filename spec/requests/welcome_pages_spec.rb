@@ -47,7 +47,7 @@ describe "WelcomePages" do
         click_link "Help"
         expect(page).to have_title('Life Tracker | Help') 
         click_link "life tracker"
-        expect(page).to have_title('Life Tracker | Welcomw') 
+        expect(page).to have_title('Life Tracker | Welcome') 
         
     end
         

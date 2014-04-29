@@ -1,6 +1,9 @@
 Project::Application.routes.draw do
   
+ 
   root 'welcome_pages#welcome' #only for now, this will be ruby-controlled once the users have a home page  
+    
+  get '/signup' => 'users#new'    
   get '/about' => 'welcome_pages#about'
   get '/welcome' => 'welcome_pages#welcome'
   get '/help' => 'welcome_pages#help'
