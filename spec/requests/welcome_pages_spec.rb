@@ -14,11 +14,6 @@ describe "WelcomePages" do
             expect(page).to have_content('Sign up now') 
             expect(page).to have_content('Sign in') 
          end
-          
-         it " should have the proper welcoming links" do
-             visit '/welcome_pages/welcome'
-            expect(page).to have_content('find out more about us') 
-         end
       
         it " should have a footer with the help and about links" do
             visit '/welcome_pages/welcome'

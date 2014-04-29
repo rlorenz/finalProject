@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Life Tracker | <%= yield(:title) %></title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+    <head>
+        <title>Life Tracker | <%= yield(:title) %></title>
+        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    
+    <body>
+    
+        <%= render 'layouts/header' %>
+        
+        <div class="containter">
+            <%= yield %>
+        </div>
+        
+        <%= render 'layouts/footer' %>
 
-<%= render 'layouts/header' %>
-<%= yield %>
-<%= render 'layouts/footer' %>
-
-</body>  
+    </body>  
 </html>
