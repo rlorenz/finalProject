@@ -24,7 +24,7 @@ Project::Application.routes.draw do
   #       post 'toggle'
   #     end
   #
-  #     collection do
+  #     collection do 
   #       get 'sold'
   #     end
   #   end
