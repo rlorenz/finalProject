@@ -1,7 +1,9 @@
 Project::Application.routes.draw do
-  get "welcome_pages/welcome"
-  get "welcome_pages/about"
-  get "welcome_pages/help"
+  
+  root 'welcome_pages#welcome' #only for now, this will be ruby-controlled once the users have a home page  
+  get '/about' => 'welcome_pages#about'
+  get '/welcome' => 'welcome_pages#welcome'
+  get '/help' => 'welcome_pages#help'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
