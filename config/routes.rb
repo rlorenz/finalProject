@@ -1,5 +1,5 @@
 Project::Application.routes.draw do
-  
+  resources :users
  
   root 'welcome_pages#welcome' #only for now, this will be ruby-controlled once the users have a home page  
     
