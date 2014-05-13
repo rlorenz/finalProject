@@ -50,6 +50,10 @@ describe User do
         end
     end
     
+    it { should respond_to(:password_confirmation) }
+    it { should respond_to(:remember_token) }
+    it { should respond_to(:authenticate) }
+    
     describe "when it is a duplicate email" do
         before do
             user_with_email = @user.dup
@@ -92,5 +96,10 @@ describe User do
         it { should_not eq user_for_invalid_password }
         specify { expect(user_for_invalid_password).to be_false }
         end
+    end
+    
+    describe "remember token" do
+        before { @user.save }
+        its(:remember_token) { should_not be_blank }
     end
 end
