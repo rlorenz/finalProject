@@ -1,8 +1,11 @@
 Project::Application.routes.draw do
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  root 'welcome_pages#welcome' #only for now, this will be ruby-controlled once the users have a home page  
+  resources :a_classes, only: [:new, :create, :destroy, :show]
+  root 'welcome_pages#welcome' 
     
+  get '/addclass' => 'a_classes#new'
   get '/signup' => 'users#new'
   get '/signin' => 'sessions#new'
   delete '/signout' => 'sessions#destroy'    

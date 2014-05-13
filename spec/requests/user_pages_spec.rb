@@ -6,16 +6,24 @@ describe "User pages" do
     
     describe "profile page" do
         let(:user) { FactoryGirl.create(:user) }
+        let!(:m1) { FactoryGirl.create(:a_class, user: user, name: "Science") }
+        let!(:m2) { FactoryGirl.create(:a_class, user: user, name: "Math") }
         before do
-        visit signin_path
-        fill_in "Email",    with: user.email.upcase
-        fill_in "Password", with: user.password
-        click_button "Sign in" 
-        visit user_path(user)
-    end
+            visit signin_path
+            fill_in "Email",    with: user.email.upcase
+            fill_in "Password", with: user.password
+            click_button "Sign in" 
+            visit user_path(user)
+        end
         
         it { should have_content(user.name) }
         it { should have_title(user.name) }
+    
+        describe "classes" do
+            it { should have_content(m1.name) }
+            it { should have_content(m2.name) }
+            it { should have_content(user.a_classes.count) }
+        end
     end
 
    describe "signup page" do

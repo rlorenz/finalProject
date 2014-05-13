@@ -8,4 +8,14 @@
             </h1>
         </section>
     </aside>
+    <div class="span8">
+        <% if @user.a_classes.any? %>
+        <h3>Classes (<%= @user.a_classes.count %>)</h3>
+            <ol class="a_classes">
+            <%= render @a_classes %>
+            </ol>
+            <%= will_paginate @a_classes %>
+        <% end %>
+        <li><%= link_to "Create a New Class", addclass_path %></li>
+    </div>
 </div>

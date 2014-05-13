@@ -1,0 +1,6 @@
+<li>
+    <span class="content"><%= a_class.name %></span>
+    <%= link_to "remove class", a_class, method: :delete,
+                                     data: { confirm: "Are you sure?" },
+                                     title: a_class.name %>
+</li>

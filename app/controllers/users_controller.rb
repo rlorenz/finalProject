@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :show]
     
   def show
-        
+        @a_classes = @user.a_classes.paginate(page: params[:page])
   end
     
   def new
@@ -23,7 +23,6 @@ class UsersController < ApplicationController
   end
     
     def edit
-        
     end
     
    def update

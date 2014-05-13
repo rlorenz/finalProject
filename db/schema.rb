@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140513011436) do
+ActiveRecord::Schema.define(version: 20140513165630) do
+
+  create_table "a_classes", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "a_classes", ["user_id", "created_at"], name: "index_a_classes_on_user_id_and_created_at"
 
   create_table "users", force: true do |t|
     t.string   "name"
