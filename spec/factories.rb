@@ -11,4 +11,11 @@ FactoryGirl.define do
     name "Science"
     user
   end
+    
+  factory :task do
+      name "Homework"
+      description "Some work to be done"
+      dueDate "20140914"
+      a_class
+  end
 end

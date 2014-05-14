@@ -1,6 +1,13 @@
 class AClassesController < ApplicationController
     before_action :signed_in_user
-    before_action :correct_user, only: :destroy
+    before_action :correct_user, only: [:destroy, :show]
+    
+    def show
+        @a_class = AClass.find(params[:id])
+        @tasks = @a_class.tasks.paginate(page: params[:page])
+        @task = @a_class.tasks.build if signed_in?
+    end
+    
     def new
         @a_class = current_user.a_classes.build if signed_in?
     end

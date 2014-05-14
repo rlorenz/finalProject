@@ -1,0 +1,15 @@
+<% provide(:title, @a_class.name) %>
+<h3>Tasks for <%= @a_class.name %></h3>
+ <div class="span8">
+    <% if @a_class.tasks.any? %>
+      <h3>Tasks (<%= @a_class.tasks.count %>)</h3>
+      <ol class="tasks">
+        <%= render @tasks %>
+      </ol>
+      <%= will_paginate @tasks %>
+    <% end %>
+    <section>
+    <% $current_class = @a_class %>
+    <%= render 'shared/task_form' %>
+    </section>
+  </div>

@@ -55,4 +55,21 @@ describe "Class pages" do
       end
     end
   end
+    
+    describe "class page" do
+        let!(:a_class) { FactoryGirl.create(:a_class, user: user, name: "Science") }
+        let!(:t1) { FactoryGirl.create(:task, a_class: a_class, name: "Homework 1") }
+        let!(:t2) { FactoryGirl.create(:task, a_class: a_class, name: "Homework 2") }
+        
+        before { visit a_class_path(a_class) }
+        
+        it { should have_content(a_class.name) }
+        it { should have_title(a_class.name) }
+        
+        describe "tasks" do
+            it { should have_content(t1.name) }
+            it { should have_content(t2.name) }
+            it { should have_content(a_class.tasks.count) }
+        end
+    end
 end

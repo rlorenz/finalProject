@@ -5,7 +5,7 @@ describe "User pages" do
     subject { page }
     
     describe "profile page" do
-        let(:user) { FactoryGirl.create(:user) }
+        let(:user) { FactoryGirl.create(:user, email: "exampleee@wisc.edu") }
         let!(:m1) { FactoryGirl.create(:a_class, user: user, name: "Science") }
         let!(:m2) { FactoryGirl.create(:a_class, user: user, name: "Math") }
         before do

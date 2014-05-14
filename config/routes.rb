@@ -3,6 +3,7 @@ Project::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :a_classes, only: [:new, :create, :destroy, :show]
+  resources :tasks, only: [:create, :destroy]
   root 'welcome_pages#welcome' 
     
   get '/addclass' => 'a_classes#new'
