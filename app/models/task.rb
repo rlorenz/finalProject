@@ -1,6 +1,6 @@
 class Task < ActiveRecord::Base
     belongs_to :a_class
-    default_scope -> { order('dueDate ASC') }
+    default_scope -> { order('"dueDate" ASC') }
     validates :a_class_id, presence: true
     validates :name, presence: true, length: { maximum: 50 }
     validates :description, length: { maximum: 120 }
