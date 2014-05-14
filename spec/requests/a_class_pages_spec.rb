@@ -51,7 +51,7 @@ describe "Class pages" do
             before { visit user_path(user) }
 
       it "should delete a class" do
-        expect { click_link "remove class" }.to change(AClass, :count).by(-1)
+        expect { click_link "remove" }.to change(AClass, :count).by(-1)
       end
     end
   end

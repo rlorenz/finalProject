@@ -1,6 +1,9 @@
 <li>
-    <span class="content"><%= link_to a_class.name, a_class %></span>
-    <%= link_to "remove class", a_class, method: :delete,
-                                     data: { confirm: "Are you sure?" },
-                                     title: a_class.name %>
+    <span class="content"><span class="className"><%= a_class.name%>
+    <% @pending = a_class.tasks.count.to_s + " pending tasks" %>
+    <span class="taskLink"><%= link_to @pending, a_class %></span></span>
+    
+    <section class="removeClass">
+        <%= link_to "remove", a_class, method: :delete, data: { confirm: "Are you sure?" }, title: a_class.name %>
+    </section>
 </li>

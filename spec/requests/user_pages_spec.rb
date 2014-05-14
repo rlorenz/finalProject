@@ -22,7 +22,6 @@ describe "User pages" do
         describe "classes" do
             it { should have_content(m1.name) }
             it { should have_content(m2.name) }
-            it { should have_content(user.a_classes.count) }
         end
     end
 

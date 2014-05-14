@@ -4,10 +4,10 @@
     <%= f.text_area :name, placeholder: "Assigment name..." %>
   </div>
   <div class="field">
-    <%= f.text_area :description, placeholder: "Description of assignment..." %>
+    <%= f.text_area :description, placeholder: "Description of assignment...(50 characters max)" %>
   </div>
   <div class= "field">
-    <%= f.text_area :dueDate, placeholder: "Date Due" %>
+    <%= f.text_area :dueDate, placeholder: "Date Due, format: YYYY-MM-DD" %>
   </div>
   <%= f.submit "Add task", class: "btn btn-large btn-primary" %>
 <% end %>

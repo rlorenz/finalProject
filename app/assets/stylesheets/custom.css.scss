@@ -130,6 +130,22 @@ aside {
       margin-bottom: 3px;
       margin-top: 0px;
     }
+    h2 {
+        font-size: 2em;
+        color: black;
+        text-align: center;
+        letter-spacing: -1px;
+        margin-bottom: 3px;
+        margin-top: 0px;
+        }
+    h3 {
+        font-size: 1.6em;
+        color: gray;
+        text-align: center;
+        letter-spacing: -1px;
+        margin-bottom: 3px;
+        margin-top: 0px;
+        }
   }
 }
 
@@ -142,7 +158,7 @@ aside {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 100%;
+  width: 95%;
   margin-bottom: 15px;
 }
 
@@ -190,3 +206,85 @@ aside {
     margin-bottom: 5px;
   }
 }
+
+/* tasks */
+
+.tasks {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.dueDate{
+    float:right;
+    font-size: .85em;
+}
+
+.name {
+  display: block;
+  font-size: 1.3em;
+}
+.completed {
+  float: right;
+  color: $grayLight;
+}
+.description{
+    color:gray;
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+/* classes */
+
+.classes{
+    list-style: none;
+    margin: 10px 0 0 0;
+    
+    li {
+        padding: 10px 0px;
+        border-top: 1px solid #e8e8e8;
+    }
+}
+.classtitle{
+    color: black;
+    font-size:1.8em;
+    text-align: center;
+}
+
+.className{
+    font-size: 1.9em;
+    
+}
+
+.taskLink{
+    float: right;
+    font-size: 0.8em;
+}
+
+.removeClass{
+}
+
+/* About page */
+
+.about{
+    h2{
+        text-align: left;
+        font-size: 1.4em;
+        color: black;
+    }
+    p{
+        font-size: .95em;
+    }
+    .info {
+        padding-top: 70px;
+    }
+}
+

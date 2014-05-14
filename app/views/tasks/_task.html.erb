@@ -1,9 +1,12 @@
 <li>
-  <span class="name"><%= task.name %></span>
+  <span class="name"><%= task.name %>
+  <span class="dueDate"> Due on: <%= task.dueDate.strftime("%B %d, %Y") %>
+  </span></span>
   <span class="description"><%= task.description %></span>
-  <span class="dueDate"> <%= task.dueDate.strftime("%B %d, %Y") %>
+  
+  <span class="completed">
   <%= link_to "Completed", task, method: :delete,
                                      data: { confirm: "Is the assignment complete?" },
                                      title: task.name %>
   </span>
-</li>
+</li> 

@@ -10,12 +10,14 @@
     </aside>
     <div class="span8">
         <% if @user.a_classes.any? %>
-        <h3>Classes (<%= @user.a_classes.count %>)</h3>
+        <section class="classtitle">
+        <p>Classes</p>
+        </section>
             <ol class="a_classes">
             <%= render @a_classes %>
             </ol>
             <%= will_paginate @a_classes %>
         <% end %>
-        <li><%= link_to "Create a New Class", addclass_path %></li>
+        <%= link_to "Add a class", addclass_path, class: "btn btn-large btn-primary"%>
     </div>
 </div>
