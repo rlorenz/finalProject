@@ -16,7 +16,7 @@ class TasksController < ApplicationController
 
   def destroy
       @task.destroy
-      flash[:success] = "Congratulations! You completed an assignment!"
+      flash[:success] = "Congratulations! You have completed an assignment!"
       redirect_to $current_class
   end
     
